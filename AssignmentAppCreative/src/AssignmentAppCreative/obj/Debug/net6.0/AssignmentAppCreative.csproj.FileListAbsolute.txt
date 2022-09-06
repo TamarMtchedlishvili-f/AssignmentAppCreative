@@ -96,3 +96,5 @@ C:\Users\Tamar.Mchedlishvili\source\repos\AssignmentAppCreativeTM\AssignmentAppC
 C:\Users\Tamar.Mchedlishvili\source\repos\AssignmentAppCreativeTM\AssignmentAppCreative\src\AssignmentAppCreative\obj\Debug\net6.0\AssignmentAppCreative.pdb
 C:\Users\Tamar.Mchedlishvili\source\repos\AssignmentAppCreativeTM\AssignmentAppCreative\src\AssignmentAppCreative\obj\Debug\net6.0\AssignmentAppCreative.genruntimeconfig.cache
 C:\Users\Tamar.Mchedlishvili\source\repos\AssignmentAppCreativeTM\AssignmentAppCreative\src\AssignmentAppCreative\obj\Debug\net6.0\ref\AssignmentAppCreative.dll
+C:\Users\Tamar.Mchedlishvili\source\repos\AssignmentAppCreativeTM\AssignmentAppCreative\src\AssignmentAppCreative\bin\Debug\net6.0\Radzen.Blazor.dll
+C:\Users\Tamar.Mchedlishvili\source\repos\AssignmentAppCreativeTM\AssignmentAppCreative\src\AssignmentAppCreative\bin\Debug\net6.0\System.Linq.Dynamic.Core.dll

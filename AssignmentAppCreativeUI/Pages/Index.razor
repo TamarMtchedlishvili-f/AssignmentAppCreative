@@ -1,0 +1,51 @@
+﻿@inject IHttpClientFactory ClientFactory
+@inject HttpClient Http
+@page "/"
+@using System.Text.Json
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?"/>
+
+<div class="text-center">
+    <input type="text" @bind="@InputText" placeholder="City Name" required id="cityName"/>
+    <button class="" id="search" @onclick="@CallApi">Search</button>
+    <h3 style="padding:55px">Weather in the requested city:</h3>
+    <div>
+        <textarea id="result"  rows="10" cols="80">@OutputText</textarea>
+    </div>
+</div>
+
+@code{
+    public string? InputText;
+    public string? OutputText = "test";
+
+    async Task CallApi()
+    {
+
+        await Http.GetAsync($"api/Weather/{InputText}");
+        
+        // var request = new HttpRequestMessage(HttpMethod.Get,
+        //     $"https://localhost:1529/api/weather/{InputText}");
+        // // request.Headers.Add("Accept", "application/vnd.github.v3+json");
+        // // request.Headers.Add("User-Agent", "HttpClientFactory-Sample");
+        //
+        // using var client = ClientFactory.CreateClient();
+        //
+        // var response = await client.SendAsync(request);
+        //
+        // if (response.IsSuccessStatusCode)
+        // {
+        //     var responseStream = await response.Content.ReadAsStringAsync();
+        // }
+        // else
+        // {
+        // }
+    }
+
+}

@@ -13,6 +13,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Amazon.Lambda.AspNetCoreServer" Version="7.2.0" />
+    <PackageReference Include="Radzen.Blazor" Version="3.20.10" />
     <PackageReference Include="RestSharp" Version="108.0.1" />
     <PackageReference Include="StackExchange.Redis" Version="2.6.48" />
   </ItemGroup>

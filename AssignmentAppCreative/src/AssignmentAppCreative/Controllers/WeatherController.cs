@@ -16,7 +16,7 @@ public interface IWeatherService
 }
 
 [Route("api/[controller]")]
-public class WeatherController
+public class WeatherController : ControllerBase
 {
     readonly IWeatherService _weatherService;
     readonly ICacheManager _cacheManager;
