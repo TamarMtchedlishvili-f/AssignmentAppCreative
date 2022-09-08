@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace TM_LambdaASP.NETCoreWebAPI.Controllers;
+namespace AssignmentAppCreative.Controllers;
 
 [Route("api/[controller]")]
 public class ValuesController : ControllerBase

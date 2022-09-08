@@ -1,6 +1,6 @@
+using AssignmentAppCreative.Controllers;
+using AssignmentAppCreative.Controllers.WeatherServiceRelated;
 using Microsoft.Net.Http.Headers;
-using TM_LambdaASP.NETCoreWebAPI.Controllers;
-using TM_LambdaASP.NETCoreWebAPI.Controllers.WeatherServiceRelated;
 
 namespace AssignmentAppCreative
 {

@@ -1,7 +1,8 @@
-﻿using RestSharp;
+﻿using AssignmentAppCreative.HelperClasses;
+using RestSharp;
 using StackExchange.Redis;
 
-namespace TM_LambdaASP.NETCoreWebAPI.Controllers.WeatherServiceRelated;
+namespace AssignmentAppCreative.Controllers.WeatherServiceRelated;
 
 public class WeatherService : IWeatherService
 {
