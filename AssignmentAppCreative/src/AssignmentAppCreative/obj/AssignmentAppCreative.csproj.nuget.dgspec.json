@@ -4,14 +4,14 @@
     "C:\\Users\\Tamar.Mchedlishvili\\source\\repos\\AssignmentAppCreativeTM\\AssignmentAppCreative\\src\\AssignmentAppCreative\\AssignmentAppCreative.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tamar.Mchedlishvili\\source\\repos\\AssignmentAppCreativeTM\\AssignmentAppCreative\\src\\AssignmentAppCreative\\AssignmentAppCreative.csproj": {
+    "C:\\Users\\Tamar.Mchedlishvili\\source\\repos\\AssignmentAppCreativeTM\\AssignmentAppCreativeUI\\AssignmentAppCreativeUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tamar.Mchedlishvili\\source\\repos\\AssignmentAppCreativeTM\\AssignmentAppCreative\\src\\AssignmentAppCreative\\AssignmentAppCreative.csproj",
-        "projectName": "AssignmentAppCreative",
-        "projectPath": "C:\\Users\\Tamar.Mchedlishvili\\source\\repos\\AssignmentAppCreativeTM\\AssignmentAppCreative\\src\\AssignmentAppCreative\\AssignmentAppCreative.csproj",
+        "projectUniqueName": "C:\\Users\\Tamar.Mchedlishvili\\source\\repos\\AssignmentAppCreativeTM\\AssignmentAppCreativeUI\\AssignmentAppCreativeUI.csproj",
+        "projectName": "AssignmentAppCreativeUI",
+        "projectPath": "C:\\Users\\Tamar.Mchedlishvili\\source\\repos\\AssignmentAppCreativeTM\\AssignmentAppCreativeUI\\AssignmentAppCreativeUI.csproj",
         "packagesPath": "C:\\Users\\Tamar.Mchedlishvili\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tamar.Mchedlishvili\\source\\repos\\AssignmentAppCreativeTM\\AssignmentAppCreative\\src\\AssignmentAppCreative\\obj\\",
+        "outputPath": "C:\\Users\\Tamar.Mchedlishvili\\source\\repos\\AssignmentAppCreativeTM\\AssignmentAppCreativeUI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tamar.Mchedlishvili\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,9 +40,114 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "RestClient": {
+              "target": "Package",
+              "version": "[3.968.19454, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.11.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Serilog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[2.11.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[6.0.8, 6.0.8]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\Tamar.Mchedlishvili\\source\\repos\\AssignmentAppCreativeTM\\AssignmentAppCreative\\src\\AssignmentAppCreative\\AssignmentAppCreative.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Tamar.Mchedlishvili\\source\\repos\\AssignmentAppCreativeTM\\AssignmentAppCreative\\src\\AssignmentAppCreative\\AssignmentAppCreative.csproj",
+        "projectName": "AssignmentAppCreative",
+        "projectPath": "C:\\Users\\Tamar.Mchedlishvili\\source\\repos\\AssignmentAppCreativeTM\\AssignmentAppCreative\\src\\AssignmentAppCreative\\AssignmentAppCreative.csproj",
+        "packagesPath": "C:\\Users\\Tamar.Mchedlishvili\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tamar.Mchedlishvili\\source\\repos\\AssignmentAppCreativeTM\\AssignmentAppCreative\\src\\AssignmentAppCreative\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Tamar.Mchedlishvili\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Tamar.Mchedlishvili\\source\\repos\\AssignmentAppCreativeTM\\AssignmentAppCreativeUI\\AssignmentAppCreativeUI.csproj": {
+                "projectPath": "C:\\Users\\Tamar.Mchedlishvili\\source\\repos\\AssignmentAppCreativeTM\\AssignmentAppCreativeUI\\AssignmentAppCreativeUI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
             "Amazon.Lambda.AspNetCoreServer": {
               "target": "Package",
               "version": "[7.2.0, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Server": {
+              "target": "Package",
+              "version": "[6.0.8, )"
             },
             "Radzen.Blazor": {
               "target": "Package",

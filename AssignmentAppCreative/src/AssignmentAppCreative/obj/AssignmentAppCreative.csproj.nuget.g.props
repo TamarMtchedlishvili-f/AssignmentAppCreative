@@ -15,4 +15,7 @@
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)radzen.blazor\3.20.10\buildTransitive\Radzen.Blazor.props" Condition="Exists('$(NuGetPackageRoot)radzen.blazor\3.20.10\buildTransitive\Radzen.Blazor.props')" />
   </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_AspNetCore_Components_WebAssembly_Server Condition=" '$(PkgMicrosoft_AspNetCore_Components_WebAssembly_Server)' == '' ">C:\Users\Tamar.Mchedlishvili\.nuget\packages\microsoft.aspnetcore.components.webassembly.server\6.0.8</PkgMicrosoft_AspNetCore_Components_WebAssembly_Server>
+  </PropertyGroup>
 </Project>

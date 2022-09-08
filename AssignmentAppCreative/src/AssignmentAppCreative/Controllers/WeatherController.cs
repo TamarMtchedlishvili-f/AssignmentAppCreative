@@ -1,6 +1,7 @@
 ﻿using System.Collections.Immutable;
 using System.Globalization;
 using System.Xml.Serialization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using RestSharp;
 using TM_LambdaASP.NETCoreWebAPI.Controllers.WeatherServiceRelated;
@@ -28,6 +29,7 @@ public class WeatherController : ControllerBase
     }
 
     [HttpGet("{cityName}")]
+    // [EnableCors(Value)]
     public async Task<string?> GetWeatherForCity(string cityName)
     {
         var valueFromCache = await _cacheManager.GetValueForAsync(cityName);

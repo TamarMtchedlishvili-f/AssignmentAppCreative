@@ -10,6 +10,8 @@ Thumbs.db
 *.exe
 *.pdb
 *.user
+.json
+.sentinel
 *.aps
 *.pch
 *.vspscc
