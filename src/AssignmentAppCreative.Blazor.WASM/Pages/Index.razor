@@ -2,7 +2,6 @@
 @inject NavigationManager NavigationManager
 @page "/"
 @using System.Net
-@using Serilog
 
 <PageTitle>Weather☔</PageTitle>
 
@@ -29,8 +28,6 @@
         
         var response = await Http.GetAsync($"api/Weather/{InputText}");
         var resultContent = await response.Content.ReadAsStringAsync();
-
-        Log.Information(resultContent);
 
         if (response.StatusCode != HttpStatusCode.OK) return;
         
