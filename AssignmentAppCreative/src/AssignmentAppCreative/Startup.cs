@@ -17,7 +17,8 @@ namespace AssignmentAppCreative
         public void ConfigureServices(IServiceCollection services)
         {
             services
-                .AddHttpClient<HttpClient>(client => client.BaseAddress = new Uri("https://localhost:1529"));
+                .AddHttpClient<HttpClient>(client => client.BaseAddress = new Uri("https://localhost:1549"))
+                ;
             // services.AddCors(options =>
             // {
             //     var origins = new[] { "https://localhost:7005", "https://localhost:1529" }.ToArray();

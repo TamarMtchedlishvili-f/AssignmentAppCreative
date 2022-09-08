@@ -4,18 +4,16 @@
 @using System.Net
 @using Serilog
 
-<PageTitle>Index</PageTitle>
+<PageTitle>Weather☔</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1>What about today's weather? 🔆☔☁</h1>
 
 
-Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?"/>
+<br/>
 
 <div class="text-center">
     <input type="text" @bind="@InputText" placeholder="City Name" required id="cityName"/>
-    <button class="" id="search" @onclick="@CallApi">Search</button>
+    <button style="background-color: #31b0d5; border-color: #31b0d5" class="" id="search" @onclick="@CallApi">Search</button>
     <h3 style="padding:55px">Weather in the requested city:</h3>
     <div>
         <textarea id="result"  rows="10" cols="80">@OutputText</textarea>
@@ -24,43 +22,18 @@ Welcome to your new app.
 
 @code{
     public string? InputText;
-    public string? OutputText = "test";
+    public string? OutputText;
 
-    async Task<string> CallApi()
+    async Task CallApi()
     {
-        // var request = new HttpRequestMessage(HttpMethod.Get, "api/Weather/{InputText}");
-        // request.SetBrowserRequestMode(BrowserRequestMode.NoCors);  
-        // request.SetBrowserRequestCache(BrowserRequestCache.NoStore);
-        //
         var response = await Http.GetAsync($"api/Weather/{InputText}");
-        var resultContent = await response.Content.ReadAsStringAsync();     
+        var resultContent = await response.Content.ReadAsStringAsync();
 
         Log.Information(resultContent);
 
-        if (response.StatusCode != HttpStatusCode.OK) return "Something bad has happened";
+        if (response.StatusCode != HttpStatusCode.OK) return;
         
         OutputText = resultContent;
         StateHasChanged();
-
-        return "Something bad has happened";
-
-    // var request = new HttpRequestMessage(HttpMethod.Get,
-    //     $"https://localhost:1529/api/weather/{InputText}");
-    // // request.Headers.Add("Accept", "application/vnd.github.v3+json");
-    // // request.Headers.Add("User-Agent", "HttpClientFactory-Sample");
-    //
-    // using var client = ClientFactory.CreateClient();
-    //
-    // var response = await client.SendAsync(request);
-    //
-    // if (response.IsSuccessStatusCode)
-    // {
-    //     var responseStream = await response.Content.ReadAsStringAsync();
-    // }
-    // else
-    // {
-    // }
-    // var x = result.Content;
     }
-
 }
