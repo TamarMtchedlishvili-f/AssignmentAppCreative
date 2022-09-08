@@ -3,17 +3,10 @@
 Thumbs.db
 #Ignore files built by Visual Studio
 *.obj
-*.json
-*.xml
-*.name
-*.cache
 *.exe
 *.pdb
 *.user
-*.json
-*.sentinel
 *.aps
-*.dll
 *.pch
 *.vspscc
 *_i.c

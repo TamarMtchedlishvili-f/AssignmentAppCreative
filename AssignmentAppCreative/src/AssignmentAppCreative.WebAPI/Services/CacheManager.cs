@@ -7,15 +7,17 @@ namespace AssignmentAppCreative.Services;
 public class CacheManager : ICacheManager
 {
     readonly ILogger<CacheManager> _logger;
+    readonly ConnectionMultiplexer _connectionMultiplexer;
 
-    public CacheManager(ILogger<CacheManager> logger)
+    public CacheManager(ILogger<CacheManager> logger, IConfiguration configuration, ConnectionMultiplexer connectionMultiplexer)
     {
-        this._logger = logger;
+        _logger = logger;
+        _connectionMultiplexer = connectionMultiplexer;
     }
 
     public async Task<string?> GetValueForAsync(string key)
     {
-        var db = Redis.GetDatabase();
+        var db = _connectionMultiplexer.GetDatabase();
 
         var returnValue = (await db.StringGetAsync(key)).ToString();
 
@@ -28,7 +30,7 @@ public class CacheManager : ICacheManager
 
     public async Task SetValueFor(string key, string? value)
     {
-        var db = Redis.GetDatabase();
+        var db = _connectionMultiplexer.GetDatabase();
 
         if ((await GetValueForAsync(key)).IsNotNullOrEmpty())
             throw new InvalidOperationException("Such value already exists");
@@ -36,11 +38,4 @@ public class CacheManager : ICacheManager
         _logger.Log(LogLevel.Information, "Setting value");
         await db.StringSetAsync(key, value, TimeSpan.FromMinutes(1));
     }
-
-    static readonly ConnectionMultiplexer Redis = ConnectionMultiplexer.Connect(
-        new ConfigurationOptions
-        {
-            EndPoints = { "redis-16545.c300.eu-central-1-1.ec2.cloud.redislabs.com:16545" },
-            Password = "S8TE3hv7WyRc9x3OHvvmyZqruVWwuATq"
-        });
 }

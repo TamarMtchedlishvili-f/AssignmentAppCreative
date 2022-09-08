@@ -1,5 +1,6 @@
 using AssignmentAppCreative.Interfaces;
 using AssignmentAppCreative.Services;
+using StackExchange.Redis;
 
 namespace AssignmentAppCreative;
 
@@ -15,14 +16,26 @@ public class Startup
     // This method gets called by the runtime. Use this method to add services to the container
     public void ConfigureServices(IServiceCollection services)
     {
-        services
-            .AddHttpClient<HttpClient>(client => client.BaseAddress = new Uri("https://localhost:1549"));
-   
+        services.AddHttpClient();
+        // .AddHttpClient(client => client.BaseAddress = new Uri("https://localhost:1549"));
+
         services.AddControllers();
         services.AddSingleton<IWeatherService, WeatherService>();
         services.AddSingleton<ICacheManager, CacheManager>();
         services.AddSingleton<IAwsSecretManager, AwsSecretManager>();
         services.AddSingleton<IWeatherDataRetriever, WeatherDataRetriever>();
+        services.AddSingleton(_ =>
+        {
+            var configSection = Configuration.GetSection("RedisEndpoint");
+
+            return ConnectionMultiplexer.Connect(
+                new ConfigurationOptions
+                {
+                    EndPoints = { configSection.GetSection("Address").Value },
+                    Password = configSection.GetSection("Password").Value
+                });
+        });
+
         services.AddControllersWithViews();
         services.AddRazorPages();
     }
@@ -55,7 +68,7 @@ public class Startup
             endpoints.MapControllers();
             endpoints.MapFallbackToFile("index.html");
         });
-            
+
         app.UseBlazorFrameworkFiles();
         app.UseStaticFiles();
     }
