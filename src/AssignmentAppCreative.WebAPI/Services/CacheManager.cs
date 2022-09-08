@@ -28,7 +28,7 @@ public class CacheManager : ICacheManager
         return returnValue;
     }
 
-    public async Task SetValueFor(string key, string? value)
+    public async Task SetValueForAsync(string key, string? value)
     {
         var db = _connectionMultiplexer.GetDatabase();
 

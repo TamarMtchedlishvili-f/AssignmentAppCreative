@@ -42,7 +42,7 @@ public class WeatherDataRetriever : IWeatherDataRetriever
             }).WhenAll())
             .FirstOrDefault();
 
-        await _cacheManager.SetValueFor(cityName, returnValue);
+        await _cacheManager.SetValueForAsync(cityName, returnValue);
         return returnValue;
     }
 }
