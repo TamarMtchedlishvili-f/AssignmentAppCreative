@@ -1,5 +1,6 @@
 using AssignmentAppCreative.Controllers;
 using AssignmentAppCreative.Controllers.WeatherServiceRelated;
+using AssignmentAppCreative.HelperClasses;
 using Microsoft.Net.Http.Headers;
 
 namespace AssignmentAppCreative
@@ -39,6 +40,7 @@ namespace AssignmentAppCreative
             services.AddControllers();
             services.AddSingleton<IWeatherService, WeatherService>();
             services.AddSingleton<ICacheManager, CacheManager>();
+            services.AddSingleton<IAwsSecretManager, AwsSecretManager>();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
