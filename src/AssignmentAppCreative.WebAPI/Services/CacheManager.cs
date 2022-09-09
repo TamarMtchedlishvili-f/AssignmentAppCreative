@@ -9,7 +9,7 @@ public class CacheManager : ICacheManager
     readonly ILogger<CacheManager> _logger;
     readonly ConnectionMultiplexer _connectionMultiplexer;
 
-    public CacheManager(ILogger<CacheManager> logger, IConfiguration configuration, ConnectionMultiplexer connectionMultiplexer)
+    public CacheManager(ILogger<CacheManager> logger, ConnectionMultiplexer connectionMultiplexer)
     {
         _logger = logger;
         _connectionMultiplexer = connectionMultiplexer;

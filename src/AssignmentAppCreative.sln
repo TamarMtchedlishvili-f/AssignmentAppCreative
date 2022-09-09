@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssignmentAppCreative.WebAP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssignmentAppCreative.Blazor.WASM", "AssignmentAppCreative.Blazor.WASM\AssignmentAppCreative.Blazor.WASM.csproj", "{F16A9E73-A359-4D18-B59A-BAB40C545EE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssignmentAppCreative.UnitTests", "AssignmentAppCreative.UnitTests\AssignmentAppCreative.UnitTests.csproj", "{68D9E311-B26F-4809-B7EC-AEE214C70EE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F16A9E73-A359-4D18-B59A-BAB40C545EE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F16A9E73-A359-4D18-B59A-BAB40C545EE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F16A9E73-A359-4D18-B59A-BAB40C545EE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68D9E311-B26F-4809-B7EC-AEE214C70EE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68D9E311-B26F-4809-B7EC-AEE214C70EE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68D9E311-B26F-4809-B7EC-AEE214C70EE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68D9E311-B26F-4809-B7EC-AEE214C70EE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
